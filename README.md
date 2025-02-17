@@ -1,13 +1,13 @@
-# AEM WKND Sites Project
+# AEM WKND Sites Project - Deploy to RDE
 
 ## Adobe Experience Manager compatibility
 
 WKND versions are compatible with the following versions of Adobe Experience Manager:
 
 | AEM version            | WKND version |
-|:-----------------------|:------------------------------:|
-| AEM as a Cloud Service | 3.x                 |
-| 6.5 SP17               | 2.x, 3.x                       |
+| :--------------------- | :----------: |
+| AEM as a Cloud Service |     3.x      |
+| 6.5 SP17               |   2.x, 3.x   |
 
 ## Released artifacts
 
@@ -30,7 +30,7 @@ A corresponding [tutorial is available](https://experienceleague.adobe.com/docs/
 
 ### AEM as a Cloud Service
 
-To deploy WKND to AEM as a Cloud Service, this project's source code must be deployed to AEM via Cloud Manager. 
+To deploy WKND to AEM as a Cloud Service, this project's source code must be deployed to AEM via Cloud Manager.
 
 1. Clone this Git repository
 2. Push the `main` branch to your Cloud Manager's Git repository
@@ -42,19 +42,19 @@ To deploy WKND to AEM as a Cloud Service, this project's source code must be dep
 
 Pre-compiled AEM packages are available under the latest release for easy installation on local environments using [CRX Package Manager](http://localhost:4502/crx/packmgr/index.jsp)
 
-* [`aem-guides-wknd.all-x.x.x.zip`](https://github.com/adobe/aem-guides-wknd/releases/latest): AEM as a Cloud Service, default build
-* [`aem-guides-wknd.all-x.x.x-classic.zip`](https://github.com/adobe/aem-guides-wknd/releases/latest): AEM 6.5.x+
+- [`aem-guides-wknd.all-x.x.x.zip`](https://github.com/adobe/aem-guides-wknd/releases/latest): AEM as a Cloud Service, default build
+- [`aem-guides-wknd.all-x.x.x-classic.zip`](https://github.com/adobe/aem-guides-wknd/releases/latest): AEM 6.5.x+
 
 ## How to build
 
-For **AEM as a Cloud Service SDK**: 
+For **AEM as a Cloud Service SDK**:
 
 ```
 $ cd aem-guides-wknd/
 $ mvn clean install -PautoInstallSinglePackage
 ```
 
-For **AEM 6.5.x**: 
+For **AEM 6.5.x**:
 
 ```
 $ cd aem-guides-wknd/
@@ -63,11 +63,11 @@ $ mvn clean install -PautoInstallSinglePackage -Pclassic
 
 ## System Requirements
 
-WKND Version | AEM as a Cloud Service | AEM 6.5       | Java SE | Maven
--------------|------------------------|---------------|---------|---------
-Latest (main branch)| Continual              | **6.5.17.0+** |  8, 11  | 3.3.9+
-[v1.1.0](https://github.com/adobe/aem-guides-wknd/releases/tag/aem-guides-wknd-1.1.0) | Continual | 6.5.10+       | 8, 11 | 3.3.9+
-[v1.0.0](https://github.com/adobe/aem-guides-wknd/releases/tag/aem-guides-wknd-1.0.0) | Continual | 6.5.4+        | 8, 11 | 3.3.9+
+| WKND Version                                                                          | AEM as a Cloud Service | AEM 6.5       | Java SE | Maven  |
+| ------------------------------------------------------------------------------------- | ---------------------- | ------------- | ------- | ------ |
+| Latest (main branch)                                                                  | Continual              | **6.5.17.0+** | 8, 11   | 3.3.9+ |
+| [v1.1.0](https://github.com/adobe/aem-guides-wknd/releases/tag/aem-guides-wknd-1.1.0) | Continual              | 6.5.10+       | 8, 11   | 3.3.9+ |
+| [v1.0.0](https://github.com/adobe/aem-guides-wknd/releases/tag/aem-guides-wknd-1.0.0) | Continual              | 6.5.4+        | 8, 11   | 3.3.9+ |
 
 Setup your local development environment for [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html) or for [older versions of AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html).
 
@@ -75,7 +75,7 @@ Setup your local development environment for [AEM as a Cloud Service SDK](https:
 
 ### WKND Sample Content
 
-By default, sample content from `ui.content.sample` will be deployed and installed along with the WKND code base. The WKND reference site is used for demo and training purposes and having a pre-built, fully authored site is useful. However, the behavior of including a full reference site (pages, images, etc...) in source control is *unusual* and is **not** recommended for a real-world implementation.
+By default, sample content from `ui.content.sample` will be deployed and installed along with the WKND code base. The WKND reference site is used for demo and training purposes and having a pre-built, fully authored site is useful. However, the behavior of including a full reference site (pages, images, etc...) in source control is _unusual_ and is **not** recommended for a real-world implementation.
 
 Including `ui.content.sample` will **overwrite** any authored content during each build. If you wish to disable this behavior modify the [filter.xml](ui.content.sample/src/main/content/META-INF/vault/filter.xml) file and update the `mode=merge` attribute to avoid overwriting the paths.
 
@@ -92,5 +92,5 @@ With Adobe Stock, you have access to more than 140 million high-quality, royalty
 
 ## Documentation
 
-* This project was generated using the [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html).
-* This project relies on [AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html).
+- This project was generated using the [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html).
+- This project relies on [AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html).
